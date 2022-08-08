@@ -29,7 +29,11 @@ footer, header, hgroup, menu, nav, section {
 	display: block;
 }
 body {
-	line-height: 1;
+	font-weight: 300;
+  font-family: 'Source Sans Pro', sans-serif;
+  background-color:${(props) => props.theme.bgColor};
+  color:${(props) => props.theme.textColor};
+  line-height: 1.2;
 }
 ol, ul {
 	list-style: none;
@@ -56,6 +60,7 @@ body {
 }
 a {
 	text-decoration:none;
+	color:inherit;
 }
 `
 function App() {
