@@ -230,10 +230,10 @@ function Coin (){
           </Overview>
           <Tabs>
             <Tab isActive={chartMatch !== null}>
-              <Link to={`/${coinId}/chart`}>Chart</Link>
+              <Link to={`/${coinId}/chart`}>Chart (Click !)</Link>
             </Tab>
             <Tab isActive={priceMatch !== null}>
-              <Link to={`/${coinId}/price`}>Price</Link>
+              <Link to={`/${coinId}/price`}>Price (Click !)</Link>
             </Tab>
           </Tabs>
           <Switch>
