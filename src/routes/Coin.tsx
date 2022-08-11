@@ -85,6 +85,7 @@ const BackBtn = styled.div`
       align-items: center;
     }
 `;
+interface ICoinProps {}
 interface RouteState {
     name:string;
 }
@@ -148,7 +149,7 @@ interface PriceData {
     
 }
 
-function Coin (){
+function Coin({}: ICoinProps) {
     
   const {coinId} = useParams<RouteParams>();
   const { state } = useLocation<RouteState>();
@@ -214,7 +215,7 @@ function Coin (){
             </OverviewItem>
             <OverviewItem>
               <span>Price:</span>
-              <span>${tickersData?.quotes.USD.price.toFixed(3)}</span>
+              <span>${tickersData?.quotes?.USD?.price?.toFixed(3)}</span>
             </OverviewItem>
           </Overview>
           <Description>{infoData?.description}</Description>
@@ -241,7 +242,7 @@ function Coin (){
               <Price coinId={coinId}/>
             </Route>
             <Route path={`/:coinId/chart`}>
-              <Chart coinId={coinId}/>
+              <Chart coinId={coinId} />
             </Route>
           </Switch>
         </>
